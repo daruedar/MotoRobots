@@ -17,3 +17,6 @@ Si el usuario selecciona usar el menu de la izquierda lo llevamos a una pagina
  Si el  usuario selecciona un repuesto, nosotros le preguntamos para que fabricante y para que modelos
  es decir lo llevamos  a una central con fabricantes  y con menu izquierdo modelos y el repuesto 
  especifico para esemodelo
+ 
+ En esta pagina  es importante tener un  content manager, para poder ajustar precios e imagenes
+ de manera agil
