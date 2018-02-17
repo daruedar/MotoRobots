@@ -1,3 +1,4 @@
+<?php /*
 contenido principal de la pagina
 En esta pagina  deben aparecer  es el index
 de mi sitio, acá van los baner y la informacion 
@@ -19,8 +20,7 @@ Si el usuario selecciona usar el menu de la izquierda lo llevamos a una pagina
  especifico para esemodelo
  
  En esta pagina  es importante tener un  content manager, para poder ajustar precios e imagenes
- de manera agil
- 
+ de manera agil */?>
  <?php
 include("micro/MisClases/Visitantes.php");
 $ip=$_SERVER['REMOTE_ADDR'];
@@ -89,14 +89,14 @@ $enlaces2[4]='bujias.php';
 $enlaces2[5]='kitdearrastre.php';
 $enlaces2[6]='kitdebiela.php';
 $enlaces2[7]='bobinas.php';
-$referenciasa[0]='';
-$referenciasa[1]='';
-$referenciasa[2]='';
-$referenciasa[3]='';
-$referenciasa[4]='';
-$referenciasa[5]='';
-$referenciasa[6]='';
-$referenciasa[7]='';
+$referenciasa[0]='gs';
+$referenciasa[1]='gs';
+$referenciasa[2]='gs';
+$referenciasa[3]='gs';
+$referenciasa[4]='gs';
+$referenciasa[5]='gs';
+$referenciasa[6]='gs';
+$referenciasa[7]='gs';
 $precioaRegular[0]='$70.000';
 $precioaRegular[1]='$90.000';
 $precioaRegular[2]='$90.000';
@@ -126,35 +126,35 @@ $masbuscados[7]='micro/imagenes/bestseller/varillafrenosparamoto.png';
 $masbuscadosdesc[0]='Stops para Moto';
 $masbuscadosdesc[1]='Vidrios de Farolas para moto';
 $masbuscadosdesc[2]='Tornillos de lujo para placa';
-$masbuscadosdesc[3]='';
-$masbuscadosdesc[4]='';
+$masbuscadosdesc[3]='gs';
+$masbuscadosdesc[4]='gs';
 $masbuscadosdesc[5]='Switch de encendido';
 $masbuscadosdesc[6]='Tapa para tanques de Combustible';
 $masbuscadosdesc[7]='Varillas pastillas y bandas para freno de moto';
 $nombreb1[0]='Stops para Moto';
 $nombreb1[1]='Vidrios de Farola para moto';
 $nombreb1[2]='Tornillos de lujo para placa';
-$nombreb1[3]='';
-$nombreb1[4]='';
+$nombreb1[3]='gs';
+$nombreb1[4]='gs';
 $nombreb1[5]='Switch de encendido';
 $nombreb1[6]='Tapa para tanques de Combustible';
 $nombreb1[7]='Varilla de Freno';
 $enlaces3[0]='stopsparamoto.php';
 $enlaces3[1]='farolas.php';
 $enlaces3[2]='taponesdedireccion.php';
-$enlaces3[3]='';
-$enlaces3[4]='';
-$enlaces3[5]='';
-$enlaces3[6]='';
-$enlaces3[7]='';
-$referenciasb[0]='';
-$referenciasb[1]='';
-$referenciasb[2]='';
-$referenciasb[3]='';
-$referenciasb[4]='';
-$referenciasb[5]='';
-$referenciasb[6]='';
-$referenciasb[7]='';
+$enlaces3[3]='taponesdedireccion.php';
+$enlaces3[4]='taponesdedireccion.php';
+$enlaces3[5]='taponesdedireccion.php';
+$enlaces3[6]='taponesdedireccion.php';
+$enlaces3[7]='taponesdedireccion.php';
+$referenciasb[0]='gs';
+$referenciasb[1]='gs';
+$referenciasb[2]='gs';
+$referenciasb[3]='gs';
+$referenciasb[4]='gs';
+$referenciasb[5]='gs';
+$referenciasb[6]='gs';
+$referenciasb[7]='gs';
 $preciobRegular[0]='$40.000';
 $preciobRegular[1]='$20.000';
 $preciobRegular[2]='$7.000';
@@ -163,7 +163,7 @@ $preciobRegular[4]='$18.000';
 $preciobRegular[5]='$25.000';
 $preciobRegular[6]='$25.000';
 $preciobRegular[7]='$10.000';
-$preciobEspecial[0]='';
+$preciobEspecial[0]='$10.000';
 $preciobEspecial[1]='$14.000';
 $preciobEspecial[2]='$4.000';
 $preciobEspecial[3]='$8.000';
@@ -171,13 +171,10 @@ $preciobEspecial[4]='$12.000';
 $preciobEspecial[5]='$15.000';
 $preciobEspecial[6]='$18.000';
 $preciobEspecial[7]='$8.000';
-
-PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
-
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" style="height: 100%;" lang="en">
-<head> <?php require ('micro/motopartes/head.php'); ?></head>
+<head> <?php require ('micro/motopartes/head.php');?></head>
 
 <body class="ps-static  cms-index-index cms-home" style="position: relative; min-height: 100%; top: 0px;">   
   <div class="wrapper ps-static en-lang-class">
@@ -355,9 +352,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
 				 
 				 
 				 
-				 
-				 
-				 
+				 		 
 				 
                  <div class="page-title category-title"><h2><?php echo($titulo1); ?></h2></div>
                  <div class="flexslider product-new-list"><!--NuevosProductos-->
@@ -365,8 +360,8 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                    <ul class="slides products-grid row" style="width: 1800%; transition-duration: 0.6s; transform: translate3d(-580px, 0px, 0px);">
                     <li class="item col-xs-4" style="width: 290px; float: left; display: block;"><!--Inicia producto nuevoNo1-->
 					 <div class="wrapper-hover">
-                      <a href="<?php echo($enlaces2[0]);?>" title="<?phpecho($prodnuevosdesc[0]); ?>" class="product-image">  
-                        <img src="<?phpecho($prodnuevos[0]); ?>" alt="<?phpecho($prodnuevosdesc[0]); ?>" draggable="false">
+                      <a href="<?php echo($enlaces2[0]);?>" title="<?php echo($prodnuevosdesc[0]); ?>" class="product-image">  
+                        <img src="<?php echo($prodnuevos[0]); ?>" alt="<?php echo($prodnuevosdesc[0]); ?>" draggable="false">
                       </a>
                       <div class="product-shop">
                         <h3 class="product-name">
@@ -394,7 +389,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                     <li class="item col-xs-4" style="width: 290px; float: left; display: block;"><!--Inicia producto nuevoNo1-->
                      <div class="wrapper-hover">
                       <a href="<?php echo($enlaces2[1]);?>" title="<?php echo($prodnuevosdesc[1]);?>" class="product-image">
-						<img src="<?phpecho($prodnuevos[1]); ?>" alt="<?php echo($prodnuevosdesc[1]); ?>" draggable="false">
+						<img src="<?php echo($prodnuevos[1]); ?>" alt="<?php echo($prodnuevosdesc[1]); ?>" draggable="false">
                       </a>
                       <div class="product-shop">
                         <h3 class="product-name">
@@ -424,7 +419,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
 					<li class="item col-xs-4" style="width: 290px; float: left; display: block;"><!--Inicia producto nuevoNo1-->
                      <div class="wrapper-hover">
                       <a href="<?php echo($enlaces2[2]);?>" title="<?php echo($prodnuevosdesc[2]);?>" class="product-image">
-						<img src="<?phpecho($prodnuevos[2]); ?>" alt="<?phpecho($prodnuevosdesc[2]); ?>" draggable="false">
+						<img src="<?php echo($prodnuevos[2]); ?>" alt="<?php echo($prodnuevosdesc[2]); ?>" draggable="false">
                       </a>
                       <div class="product-shop">
                        <h3 class="product-name">
@@ -452,7 +447,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                     <li class="item col-xs-4" style="width: 290px; float: left; display: block;"><!--Inicia producto nuevoNo1-->
                      <div class="wrapper-hover">
                       <a href="<?php echo($enlaces2[3]);?>" title="<?php echo($prodnuevosdesc[3]);?>" class="product-image">
-					   <img src="<?phpecho($prodnuevos[3]); ?>" alt="<?phpecho($prodnuevosdesc[3]); ?>" draggable="false">
+					   <img src="<?php echo($prodnuevos[3]); ?>" alt="<?php echo($prodnuevosdesc[3]); ?>" draggable="false">
                       </a>
                       <div class="product-shop">
                        <h3 class="product-name">
@@ -479,7 +474,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                     <li class="item col-xs-4" style="width: 290px; float: left; display: block;"><!--Inicia producto nuevoNo1-->
                      <div class="wrapper-hover">
                       <a href="<?php echo($enlaces2[4]);?>" title="<?php echo($prodnuevosdesc[4]);?>" class="product-image">
-                       <img src="<?phpecho($prodnuevos[4]); ?>" alt="<?phpecho($prodnuevosdesc[4]); ?>" draggable="false">
+                       <img src="<?php echo($prodnuevos[4]); ?>" alt="<?php echo($prodnuevosdesc[4]); ?>" draggable="false">
                       </a>
                      <div class="product-shop">
                       <h3 class="product-name">
@@ -505,7 +500,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                     <li class="item col-xs-4" style="width: 290px; float: left; display: block;"><!--Inicia producto nuevoNo1-->
                      <div class="wrapper-hover">
                       <a href="<?php echo($enlaces2[5]);?>" title="<?php echo($prodnuevosdesc[5]);?>" class="product-image">
-                       <img src="<?phpecho($prodnuevos[5]); ?>" alt="<?phpecho($prodnuevosdesc[5]); ?>" draggable="false">
+                       <img src="<?php echo($prodnuevos[5]); ?>" alt="<?php echo($prodnuevosdesc[5]); ?>" draggable="false">
                       </a>
                       <div class="product-shop">
                        <h3 class="product-name">
@@ -533,7 +528,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                     <li class="item col-xs-4" style="width: 290px; float: left; display: block;"><!--Inicia producto nuevoNo1-->
                      <div class="wrapper-hover">
                       <a href="<?php echo($enlaces2[6]);?>" title="<?php echo($prodnuevosdesc[6]);?>" class="product-image">
-					   <img src="<?phpecho($prodnuevos[6]); ?>" alt="<?phpecho($prodnuevosdesc[6]); ?>" draggable="false">
+					   <img src="<?php echo($prodnuevos[6]); ?>" alt="<?php echo($prodnuevosdesc[6]); ?>" draggable="false">
                       </a>
                      <div class="product-shop">
                       <h3 class="product-name">
@@ -560,7 +555,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                     <li class="item col-xs-4" style="width: 290px; float: left; display: block;"><!--Inicia producto nuevoNo1-->
                      <div class="wrapper-hover">
                       <a href="<?php echo($enlaces2[7]);?>" title="<?php echo($prodnuevosdesc[7]);?>" class="product-image">
-                       <img src="<?phpecho($prodnuevos[7]); ?>" alt="<?phpecho($prodnuevosdesc[7]); ?>" draggable="false">
+                       <img src="<?php echo($prodnuevos[7]); ?>" alt="<?php echo($prodnuevosdesc[7]); ?>" draggable="false">
                       </a>
                       <div class="product-shop">
                        <h3 class="product-name">
@@ -616,7 +611,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
 		             <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
 				      <div class="wrapper-hover">
 						<a href="<?php echo($enlaces3[0]);?>" title="<?php echo($masbuscadosdesc[0]); ?>" class="product-image">
-							<img src="<?phpecho($masbuscados[0]); ?>" alt="<?php echo($masbuscadosdesc[0]);?>" draggable="false">
+							<img src="<?php echo($masbuscados[0]); ?>" alt="<?php echo($masbuscadosdesc[0]);?>" draggable="false">
 					    </a>
 					    <div class="product-shop">
 						 <h3 class="product-name"><a href="<?php echo($enlaces3[0]);?>" title="<?php echo($masbuscadosdesc[0]);?>"><?php echo($nombreb1[0]);?></a></h3>
@@ -638,7 +633,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                      <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
 				      <div class="wrapper-hover">
 					    <a href="<?php echo($enlaces3[1]);?>" title="<?php echo($masbuscadosdesc[1]);?>" class="product-image">
-					        <img src="<?phpecho($masbuscados[1]); ?>" alt="<?php echo($masbuscadosdesc[1]); ?>" draggable="false">
+					        <img src="<?php echo($masbuscados[1]); ?>" alt="<?php echo($masbuscadosdesc[1]); ?>" draggable="false">
 					    </a>
 					    <div class="product-shop">
 						 <h3 class="product-name"><a href="<?php echo($enlaces3[0]);?>" title="<?php echo($masbuscadosdesc[1]);?>"><?php echo($nombreb1[1]);?></a></h3>
@@ -658,7 +653,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                      <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
 				       <div class="wrapper-hover">
 					    <a href="<?php echo($enlaces3[2]);?>" title="<?php echo($masbuscadosdesc[2]);?>" class="product-image">
-							<img  src="<?phpecho($masbuscados[2]); ?>" alt="<?php echo($masbuscadosdesc[2]); ?>" draggable="false">
+							<img  src="<?php echo($masbuscados[2]); ?>" alt="<?php echo($masbuscadosdesc[2]); ?>" draggable="false">
 					    </a>
 					    <div class="product-shop">
 						 <h3 class="product-name"><a href="<?php echo($enlaces3[2]);?>" title="<?php echo($masbuscadosdesc[2]);?>"> <?php echo($nombreb1[2]);?></a></h3>
@@ -682,7 +677,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                      <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
 				      <div class="wrapper-hover">
 					    <a href="<?php echo($enlaces3[3]);?>" title="<?php echo($masbuscadosdesc[3]);?>" class="product-image">
-					     <img src="<?phpecho($masbuscados[3]); ?>" alt="<?php echo($masbuscadosdesc[3]);?>" draggable="false">
+					     <img src="<?php echo($masbuscados[3]); ?>" alt="<?php echo($masbuscadosdesc[3]);?>" draggable="false">
 					    </a>
 					    <div class="product-shop">
 						 <h3 class="product-name"><a href="<?php echo($enlaces3[3]);?>" title="<?php echo($masbuscadosdesc[3]);?>"><?php echo($nombreb1[3]);?></a></h3>
@@ -701,7 +696,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
                      <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
 				      <div class="wrapper-hover">
 					    <a href="<?php echo($enlaces3[4]);?>" title="<?php echo($masbuscadosdesc[4]);?>" class="product-image">
-					     <img src="<?phpecho($masbuscados[4]); ?>"  alt="<?php echo($masbuscadosdesc[4]);?>" draggable="false">
+					     <img src="<?php echo($masbuscados[4]); ?>"  alt="<?php echo($masbuscadosdesc[4]);?>" draggable="false">
 					    </a>
 					    <div class="product-shop">
 						 <h3 class="product-name"><a href="<?php echo($enlaces3[4]);?>" title="<?php echo($masbuscadosdesc[4]);?>"><?php echo($nombreb1[4]);?></a></h3>
@@ -720,7 +715,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
 			         <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
 				      <div class="wrapper-hover">
 					   <a href="<?php echo($enlaces3[5]);?>" title="<?php echo($masbuscadosdesc[5]);?>" class="product-image">
-					    <img src="<?phpecho($masbuscados[5]); ?>" alt="<?php echo($masbuscadosdesc[5]);?>" draggable="false">
+					    <img src="<?php echo($masbuscados[5]); ?>" alt="<?php echo($masbuscadosdesc[5]);?>" draggable="false">
 					   </a>
 					   <div class="product-shop">
 						 <h3 class="product-name"><a href="<?php echo($enlaces3[5]);?>" title="<?php echo($masbuscadosdesc[5]);?>"><?php echo($nombreb1[5]);?></a></h3>
@@ -739,7 +734,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
 			         <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
 				      <div class="wrapper-hover">
 					    <a href="<?php echo($enlaces3[6]);?>" title="Studen-80X " class="product-image">
-					     <img src="<?phpecho($masbuscados[6]); ?>" alt="<?php echo($masbuscadosdesc[6]);?>" draggable="false">
+					     <img src="<?php echo($masbuscados[6]); ?>" alt="<?php echo($masbuscadosdesc[6]);?>" draggable="false">
 					    </a>
 					    <div class="product-shop">
 						 <h3 class="product-name"><a href="<?php echo($enlaces3[6]);?>" title="<?php echo($masbuscadosdesc[6]);?>"><?php echo($nombreb1[6]);?></a></h3>
@@ -758,7 +753,7 @@ PENDIENTE LOS  PRECIOS ESPECIALES Y LISTO  COMMIT
 			         <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
 				      <div class="wrapper-hover">
 					    <a href="<?php echo($enlaces3[7]);?>" title="<?php echo($masbuscadosdesc[7]);?>" class="product-image">
-					     <img src="<?phpecho($masbuscados[7]); ?>" alt="<?php echo($masbuscadosdesc[7]);?>" draggable="false">
+					     <img src="<?php echo($masbuscados[7]); ?>" alt="<?php echo($masbuscadosdesc[7]);?>" draggable="false">
 					    </a>
 					    <div class="product-shop">
 						 <h3 class="product-name"><a href="<?php echo($enlaces3[7]);?>" title="<?php echo($masbuscadosdesc[7]);?>"></a><?php echo($nombreb1[7]); ?></h3>
