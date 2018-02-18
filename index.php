@@ -1,27 +1,4 @@
-<?php /*
-contenido principal de la pagina
-En esta pagina  deben aparecer  es el index
-de mi sitio, acá van los baner y la informacion 
-de la empresa
-Es importante que  todos  los ver mas de las  imagenes
-apunten  hacia el catalogo general de repuestos-de-motos
-para que el usuario desde ahi se ubuque  con los fabricantes y repuestos que busca
-
-El menu de navegacion izquierdo por optimizacion pARA INDECXACINO CON GOOGLE
-lo podemos decir con los  nombres  de los  repuestos  tal cual  se  hizo al principio
-y de la misma  manera que figuran en el catalogo impreso
-
-Si el usuario selecciona usar el menu de la izquierda lo llevamos a una pagina
- que contenga:
-  en la  parte central los fabricantes  y a la izquierda fabricantes y modelos
-  
- Si el  usuario selecciona un repuesto, nosotros le preguntamos para que fabricante y para que modelos
- es decir lo llevamos  a una central con fabricantes  y con menu izquierdo modelos y el repuesto 
- especifico para esemodelo
- 
- En esta pagina  es importante tener un  content manager, para poder ajustar precios e imagenes
- de manera agil */?>
- <?php
+<?php
 include("micro/MisClases/Visitantes.php");
 $ip=$_SERVER['REMOTE_ADDR'];
 date_default_timezone_set('America/Bogota');
@@ -30,6 +7,7 @@ $pagina='Index';
 $navegador=$_SERVER['HTTP_USER_AGENT'];;
 $hora=date('H:i:s');
 $prueba = new Visitantes($ip,$fecha,$pagina,$navegador,$hora);
+
 
 $titulo1='Productos Nuevos';
 $titulo2='Los m&aacute;s Buscados';
@@ -52,7 +30,7 @@ $enlaces1[0]='amortiguadores.php';
 $enlaces1[1]='kitdearrastre.php';
 $enlaces1[2]='baterias.php ';
 $enlaces1[3]='kitdebiela.php';
-$enlaces1[4]='';
+$enlaces1[4]='kitdebiela.php';
 $enlaces1[5]='velocimetros.php';
 
 
@@ -89,14 +67,14 @@ $enlaces2[4]='bujias.php';
 $enlaces2[5]='kitdearrastre.php';
 $enlaces2[6]='kitdebiela.php';
 $enlaces2[7]='bobinas.php';
-$referenciasa[0]='gs';
-$referenciasa[1]='gs';
-$referenciasa[2]='gs';
-$referenciasa[3]='gs';
-$referenciasa[4]='gs';
-$referenciasa[5]='gs';
-$referenciasa[6]='gs';
-$referenciasa[7]='gs';
+$referenciasa[0]='MJH 256';
+$referenciasa[1]='HTR 765';
+$referenciasa[2]='QWY PKF';
+$referenciasa[3]='UIR 231';
+$referenciasa[4]='RIO 143';
+$referenciasa[5]='YRT 124';
+$referenciasa[6]='UIO 321';
+$referenciasa[7]='TRM 907';
 $precioaRegular[0]='$70.000';
 $precioaRegular[1]='$90.000';
 $precioaRegular[2]='$90.000';
@@ -126,16 +104,16 @@ $masbuscados[7]='micro/imagenes/bestseller/varillafrenosparamoto.png';
 $masbuscadosdesc[0]='Stops para Moto';
 $masbuscadosdesc[1]='Vidrios de Farolas para moto';
 $masbuscadosdesc[2]='Tornillos de lujo para placa';
-$masbuscadosdesc[3]='gs';
-$masbuscadosdesc[4]='gs';
+$masbuscadosdesc[3]='Tornillos de lujo para placa';
+$masbuscadosdesc[4]='Tornillos de lujo para placa';
 $masbuscadosdesc[5]='Switch de encendido';
 $masbuscadosdesc[6]='Tapa para tanques de Combustible';
 $masbuscadosdesc[7]='Varillas pastillas y bandas para freno de moto';
 $nombreb1[0]='Stops para Moto';
 $nombreb1[1]='Vidrios de Farola para moto';
 $nombreb1[2]='Tornillos de lujo para placa';
-$nombreb1[3]='gs';
-$nombreb1[4]='gs';
+$nombreb1[3]='Tornillos de lujo';
+$nombreb1[4]='Tornillos de lujo';
 $nombreb1[5]='Switch de encendido';
 $nombreb1[6]='Tapa para tanques de Combustible';
 $nombreb1[7]='Varilla de Freno';
@@ -147,14 +125,14 @@ $enlaces3[4]='taponesdedireccion.php';
 $enlaces3[5]='taponesdedireccion.php';
 $enlaces3[6]='taponesdedireccion.php';
 $enlaces3[7]='taponesdedireccion.php';
-$referenciasb[0]='gs';
-$referenciasb[1]='gs';
-$referenciasb[2]='gs';
-$referenciasb[3]='gs';
-$referenciasb[4]='gs';
-$referenciasb[5]='gs';
-$referenciasb[6]='gs';
-$referenciasb[7]='gs';
+$referenciasb[0]='EFG 893';
+$referenciasb[1]='PTR 458';
+$referenciasb[2]='BNF 245';
+$referenciasb[3]='AQP 213';
+$referenciasb[4]='WUY 985';
+$referenciasb[5]='WQY 985';
+$referenciasb[6]='BIG 234';
+$referenciasb[7]='WTM 224';
 $preciobRegular[0]='$40.000';
 $preciobRegular[1]='$20.000';
 $preciobRegular[2]='$7.000';
@@ -171,55 +149,100 @@ $preciobEspecial[4]='$12.000';
 $preciobEspecial[5]='$15.000';
 $preciobEspecial[6]='$18.000';
 $preciobEspecial[7]='$8.000';
+
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" style="height: 100%;" lang="en">
-<head> <?php require ('micro/motopartes/head.php');?></head>
+<head> <?php require ('micro/motopartes/head.php'); ?></head>
 
 <body class="ps-static  cms-index-index cms-home" style="position: relative; min-height: 100%; top: 0px;">   
-  <div class="wrapper ps-static en-lang-class">
-    <noscript><div class="global-site-notice noscript">
-		<div class="notice-inner">
-		<p><strong>JavaScript seems to be disabled in your browser.</strong>
-		<br />You must have JavaScript enabled in your browser to utilize the 
-		functionality of this website. </p></div></div>
-	</noscript>
-	<div class="page"><!--1.2-->
-		<div class="shadow"></div><!--1.2.1  VACIO-->
-		<div class="swipe-left"></div><!--1.2.2   VACIO-->
-		<?php include "micro/motopartes/menusuperiormovil.php" ?>
-		<div class="header-container"><!--1.2.5-->
-		  <?php include "micro/motopartes/encabezado.php" ?>
-		  <?php include "micro/motopartes/menumovil.php" ?>
-		  <script type="text/javascript"><!--1.2.7-->
+	<div class="wrapper ps-static en-lang-class">
+        <noscript><div class="global-site-notice noscript"><div class="notice-inner"><p><strong>JavaScript seems to be disabled in your browser.</strong><br />You must have JavaScript enabled in your browser to utilize the functionality of this website. </p></div></div></noscript>
+		<div class="page"><!--1.2-->
+		 <div class="shadow"></div><!--1.2.1  VACIO-->
+		 <div class="swipe-left"></div><!--1.2.2   VACIO-->
+		 <?php include "micro/motopartes/menusuperiormovil.php" ?>
+			<div class="header-container"><!--1.2.5-->
+			    <?php include "micro/motopartes/encabezado.php" ?>
+			    <?php include "micro/motopartes/menumovil.php" ?>
+			    <script type="text/javascript"><!--1.2.7-->
 				    jQuery(document).ready(function() {
 				        var $ = jQuery;var currentUrl = "";
 				    if ((navigator.userAgent.match(/iPad/i))) {
 				        $('li.level-top a').click(function(){
-                     if($(this).parent().hasClass("level1")) return true;
-					 if(currentUrl != $(this).attr('href')){currentUrl = $(this).attr('href');
-					 return false;}});
+                     if($(this).parent().hasClass("level1")) return true;if(currentUrl != $(this).attr('href')){currentUrl = $(this).attr('href');return false;}});
 				    }});
-		  </script>
-		  <div class="main-container col2-left-layout"><!--1.2.8--><!--El mas denso-->
-		  <div class="container">
-		   <div class="row">
-		    <div class="col-xs-12">
-			 <div class="main">
-			  <div class="row">
-	           <div class="col-main col-xs-12 col-sm-9">
-				<div class="padding-s">
-				 <div class="std"><p></p>
-                  <div class="magestore-bannerslider" ><!--Banner-->
-		           <div class="magestore-bannerslider-standard">
-                    <script src="micro/js/jquery_002.js"></script><!-- invocacion script  ***********************+++en el cuerpo del codigo-->
-	                <link rel="stylesheet" type="text/css" href="micro/css/flexslider.css" media="all">
-	                <script type="text/javascript">   
-		                var j7 = jQuery.noConflict();
-		                j7(window).load(function() {j7('.flexslider-7-1').flexslider({animation: "fade",slideshowSpeed: 4500}); });           /*minItems: 2,//maxItems: 4 */
-	                </script>
-<!--Imag baner-->   <div class="flexslider flexslider-7-1" >
-		             <ul class="slides"> 
+			    </script>
+			    <div class="main-container col2-left-layout"><!--1.2.8--><!--El mas denso-->
+				    <div class="container">
+					    <div class="row">
+					    <div class="col-xs-12">
+						    <div class="main">
+							    <div class="row">
+	<!-- Baner  new  -->			<div class="col-main col-xs-12 col-sm-9">
+									    <div class="padding-s">
+	<!--Baner y botones de colores-->	<div class="std"><p></p>
+                                                <div class="magestore-bannerslider" ><!--Banner-->
+		                                            <div class="magestore-bannerslider-standard">
+                                                        <script src="micro/js/jquery_002.js"></script><!-- invocacion script  ***********************+++en el cuerpo del codigo-->
+	                                                    <link rel="stylesheet" type="text/css" href="micro/css/flexslider.css" media="all">
+	                                                    <script type="text/javascript">   
+		                                                    var j7 = jQuery.noConflict();
+		                                                    j7(window).load(function() {j7('.flexslider-7-1').flexslider({animation: "fade",slideshowSpeed: 4500}); });           /*minItems: 2,//maxItems: 4 */
+	                                                    </script>
+	      <!--Imagenes del baner-->                    <div class="flexslider flexslider-7-1" >
+		                                                    <!--<ul class="slides"> 
+                                                                <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide">
+                                                                    <a href="amortiguadores.php" target="_self" onclick="bannerClicks('29','1')" style="display:block">
+	                                                                    <img alt="Amortiguadores para motos en  Colombia" src="micro/imagenes/baner1/susp1.jpg" draggable="false"></a>
+			                                                    </li>
+                                                                <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+				                                                    <a href="kitdearrastre.php" target="_self" onclick="bannerClicks('26','1')" style="display:block">
+		                                                            <img alt="Kit de arrastre para motos" src="micro/imagenes/baner1/img22.png" draggable="false"></a>
+			                                                    </li>
+                                                                <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+                                                                    <a href="baterias.php" target="_self" onclick="bannerClicks('27','1')" style="display:block">
+	                                                               <img alt="Baterias  para motos en Colombia" src="micro/imagenes/baner1/img33.png" draggable="false"></a>
+			                                                    </li>
+                                                                <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+                                                                    <div class="bannerslider-image-text" style="cursor: pointer;">
+                                                                        <div style="color: rgb(255, 255, 255); margin: 6% 0px 0px 2%; text-align: center; position: absolute; left: 0px; max-width: 50%; font-size: 10.631px;" fontsize="12px">
+                                                                    		<h3 style="font-size: 17.7184px; margin: 0px; padding: 0px; font-weight: 600;" fontsize="20px"></h3>
+                                                                    	    <h2 style="text-transform: uppercase; font-size: 26.5776px; margin: 0.2em 0em; padding: 0px;" fontsize="30px"><b fontsize="30px" style="font-size: 26.5776px;"></b></h2>
+                                                                    		<h3 style="font-size: 17.7184px; margin: 0px; padding: 0px; font-weight: 600;" fontsize="20px"></h3>
+                                                                    	</div>
+	                                                                </div>
+                                                                        <a href="kitdebiela.php" target="_self" onclick="bannerClicks('9','1')" style="display:block">
+	                                                                        <img alt="Kit de biela para motos" src="micro/imagenes/baner1/img44.png" draggable="false">
+				                                                        </a>
+			                                                    </li>
+                                                                <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+                                                                    <div class="bannerslider-image-text" style="cursor: pointer;">
+                                                            			<div style="color: rgb(255, 255, 255); margin: 6% 0px 0px 6%; font-family: Arial,Helvetica,sans-serif; font-size: 10.631px;" fontsize="12px">
+                                                            			    <h2 style="text-transform: uppercase; font-size: 44.296px; margin: 0px; padding: 0px;" fontsize="50px"><b fontsize="50px" style="font-size: 44.296px;"></b></h2>
+                                                            			    <h2 style="text-transform: uppercase; font-size: 44.296px; margin: 0px; padding: 0px;" fontsize="50px"><b fontsize="50px" style="font-size: 44.296px;"></b></h2>
+                                                            			    <h3 style="font-size: 44.296px; margin: 0px; padding: 0px; font-weight: 600;" fontsize="50px"></h3>
+                                                            		    </div>
+                                                            		</div>
+                                                                    <a href="" target="_self" onclick="bannerClicks('10','1')" style="display:block">
+		                                                                <img alt=" Tienda Repuestos electricos para moto" src="micro/imagenes/baner1/img55.png" draggable="false"></a>
+			                                                    </li>
+                                                                <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
+                                                                    <div class="bannerslider-image-text" style="cursor: pointer;">
+                                                                        <div style="width: 500px; margin-right: auto; margin-left: auto; padding-top: 100px; font-size: 10.631px;" fontsize="12px">
+                                                                		    <h2 style="text-align: center; color: rgb(255, 255, 255); font-weight: bold; font-size: 35.4368px; line-height: 35px;" fontsize="40px">
+                                                                		        <br fontsize="40px" style="font-size: 35.4368px;">
+                                                                		    </h2>
+                                                                	    </div>
+                                                                	</div>
+                                                                    <a href="velocimetros.php" target="_self" onclick="bannerClicks('11','1')" style="display:block">
+	                                                                <img alt="Velocimetros y Tacometros para moto" src="micro/imagenes/baner1/velocimetros.jpg" draggable="false"></a>
+			                                                    </li>
+				                                                
+		                                                    </ul>-->
+		                                                    
+		                                                     <ul class="slides"> 
                       <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide">
                        <a href="<?php echo($enlaces1[0]); ?>" target="_self" onclick="bannerClicks('29','1')" style="display:block">
 	                    <img alt="<?php echo($baner1desc[0]); ?>" src="<?php echo($baner1[0]); ?>" draggable="false"></a>
@@ -268,6 +291,8 @@ $preciobEspecial[7]='$8.000';
 			          </li>
 				                                            <!-- items mirrored twice, total of 12 -->
 		             </ul>
+                    
+		                                                    
                                                     	<!--	<ol class="flex-control-nav flex-control-paging">
                                                     		    <li><a class="flex-active">1</a></li>
                                                     		    <li><a class="">2</a></li>
@@ -276,33 +301,33 @@ $preciobEspecial[7]='$8.000';
                                                     		    <li><a class="">5</a></li>
                                                     		    <li><a class="">6</a></li>
                                                     		</ol>-->
-		             <ul class="flex-direction-nav">
-		              <li class="flex-nav-prev"><a class="flex-prev" href="">Anterior</a></li>
-		              <li class="flex-nav-next"><a class="flex-next" href="">Siguiente</a></li>
-		             </ul>
-	                </div>
-                   </div>    
-                  </div><!--Fin del Baner1-->
-                  <p></p>
-                  <div style="line-height: 8px;">&nbsp;</div>
-				   <ul class="banner-block" ><!--BotonesColores-->
-                    <li>
-                     <div class="banner-block-content" style="background: #008a44;"><a style="color: white; font-family: 'Raleway' sans-serif; font-weight: 600;" href="stopsparamoto.php"><span>STOPS</span></a></div>
-                    </li>
-                    <li>
-                     <div class="banner-block-content" style="background: #d68f0d;"><a style="color: white; font-family: 'Raleway', sans-serif; font-weight: 600;" href="llantasparamoto.php"><span>LLANTAS</span></a></div>
-                    </li>
-                    <li>
-                     <div class="banner-block-content" style="background: #b70b34;"><a style="color: white; font-family: 'Raleway', sans-serif; font-weight: 600;" href="filtrosdeaceite.php"><span>FILTROS DE ACEITE</span></a></div>
-                    </li>
-                   </ul><!--Fin BotonesColores-->
-                   <script type="text/javascript">// <![CDATA[
-                    var google_tag_params = {
-        	        ecomm_prodid: '',
-        	        ecomm_pagetype: 'home',
-        	        ecomm_totalvalue: ''
-                    };
-                    jQuery(document).ready(function(e){
+		                                                    <ul class="flex-direction-nav">
+		                                                        <li class="flex-nav-prev"><a class="flex-prev" href="">Previous</a></li>
+		                                                        <li class="flex-nav-next"><a class="flex-next" href="">Next</a></li>
+		                                                    </ul>
+	                                                    </div>
+                                                    </div>    
+                                                 </div><!--Fin del Baner1-->
+                                                <p></p>
+                                                <div style="line-height: 8px;">&nbsp;</div>
+            <!--BotonesColores-->               <ul class="banner-block" >
+                                                    <li>
+                                                        <div class="banner-block-content" style="background: #008a44;"><a style="color: white; font-family: 'Raleway' sans-serif; font-weight: 600;" href="stopsparamoto.php"><span>STOPS</span></a></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="banner-block-content" style="background: #d68f0d;"><a style="color: white; font-family: 'Raleway', sans-serif; font-weight: 600;" href="llantasparamoto.php"><span>LLANTAS</span></a></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="banner-block-content" style="background: #b70b34;"><a style="color: white; font-family: 'Raleway', sans-serif; font-weight: 600;" href="filtrosdeaceite.php"><span>FILTROS DE ACEITE</span></a></div>
+                                                    </li>
+            <!--Fin BotonesColores-->           </ul>
+                                                <script type="text/javascript">// <![CDATA[
+                                                            var google_tag_params = {
+        	                                                ecomm_prodid: '',
+        	                                                ecomm_pagetype: 'home',
+        	                                                ecomm_totalvalue: ''
+                                                            };
+                                                            jQuery(document).ready(function(e){
         	                                            var $ = jQuery;
                                                     	
                                                     	$('.bannerslider-image-text').each(function(index, element){
@@ -347,17 +372,224 @@ $preciobEspecial[7]='$8.000';
                                                         });
                                                     });
                                                     // ]]>
-                   </script>
-                 </div><!--Fin clase std-->
-				 
-				 
-				 
-				 		 
-				 
-                 <div class="page-title category-title"><h2><?php echo($titulo1); ?></h2></div>
-                 <div class="flexslider product-new-list"><!--NuevosProductos-->
-                  <div class="flex-viewport" style="overflow: hidden; position: relative;">
-                   <ul class="slides products-grid row" style="width: 1800%; transition-duration: 0.6s; transform: translate3d(-580px, 0px, 0px);">
+                                                </script>
+                                            </div><!--Fin clase std-->
+    <!-- Productos nuevos-->            <div class="page-title category-title"><h2>Productos Nuevos</h2></div>
+  <!--Productos  nuevos total 9-->          <div class="flexslider product-new-list"><!--NuevosProductos-->
+                                                <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                <!--                    
+                            <ul class="slides products-grid row" style="width: 1800%; transition-duration: 0.6s; transform: translate3d(-580px, 0px, 0px);">
+                               <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+                                                            <div class="wrapper-hover">
+                                                                <a href="" title="Arbol de levas para motocicletas  todos los modelos" class="product-image">  
+                                                                    <img src="micro/imagenes/newprod/arboldelevasarl2502.jpg" alt="Arbol de levas para akt 125 y cg125" draggable="false">
+                                                                </a>
+                                                                <div class="product-shop">
+                                                                    <h3 class="product-name">
+                                                                        <a href="" title="Arbol de levas para motos auteco, akt y yamaha ">
+                                                                        Arbol de levas para motos Auteco, Akt y Yamaha.</a>
+                                                                    </h3>
+                                                                    <h3 class="product-sku">FWP-7057</h3>
+                                                                    <div class="price-box">
+                                                                        <p class="old-price"><span class="price-label">
+                                                                        Precio Regular:</span><span class="price" id="old-price-4897">$70.000 </span></p>
+                                                                        <p class="special-price"><span class="price-label">Precio Especial</span>
+                                                                        <span class="price" id="product-price-4897">$55.000 </span></p>
+                                                                    </div>
+                                                                <div class="actions">
+        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Ver mas</span></span></button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="label-product"> </div><div class="clear"></div>
+                                                            </div>
+                                                         </li>
+                               <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+                                                            <div class="wrapper-hover">
+                                                                <a href="" title="Amortiguadores para motos AKT ,Yamaha, Suzuki, Auteco, Honda, Kawasaki..." class="product-image">
+        <img src="micro/imagenes/newprod/amortiguadoramt2582.jpg" alt="Amortiguadores para moto Yamaha bws-100" draggable="false">
+                                                                </a>
+                                                                <div class="product-shop">
+                                                                    <h3 class="product-name">
+        <a href="" title="Amortiguadores para motos AKT ,Yamaha, Suzuki, Auteco, Honda, Kawasaki...">
+       
+        Amortiguadores para motos AKT ,Yamaha, Suzuki, Auteco, Honda...</a>
+                                                                    </h3>
+        <h3 class="product-sku">FPYFOR7037</h3>
+                                                                <div class="price-box">
+                                                                     <p class="old-price"><span class="price-label">
+                                                                    
+        Precio Regular:</span><span class="price" id="old-price-4897">$90.000 </span></p>
+        <p class="special-price"><span class="price-label">Precio Especial</span>
+        <span class="price" id="product-price-4897">$60.000 </span></p>
+                                                                </div>
+                                                                <div class="actions">
+        <button type="button" title="Comprar repuesto" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Ver mas</span></span></button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="label-product"> </div><div class="clear"></div>
+                                                            </div>
+                                                         </li>                                                 
+                               <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+                                                            <div class="wrapper-hover">
+                                                                <a href="" title="Velocimetros analogos y digitales para diversos modelos de motocicletas" class="product-image">
+        <img src="micro/imagenes/newprod/velocimetrox.jpg" alt="Velocimetros analogos y digitales para diversos modelos de motocicletas" draggable="false">
+                                                                </a>
+                                                                <div class="product-shop">
+                                                                    <h3 class="product-name">
+        <a href="" title="Velocimetros analogos y digitales para  motocicletas">
+        Velocimetros analogos y digitales para  motos  Honda Akt...</a>
+                                                                    </h3>
+        <h3 class="product-sku">F153C-NXC</h3>
+                                                                <div class="price-box">
+                                                                     <p class="old-price"><span class="price-label">
+                                                                    
+        Precio Regular:</span><span class="price" id="old-price-4897">$90.000 </span></p>
+        <p class="special-price"><span class="price-label">Precio Especial</span>
+        <span class="price" id="product-price-4897">$70.000</span></p>
+                                                                </div>
+                                                                <div class="actions">
+        <button type="button" title="Comprar repuesto de moto" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Ver mas</span></span></button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="label-product"> </div><div class="clear"></div>
+                                                            </div>
+                                                         </li>
+                               <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+                                                            <div class="wrapper-hover">
+                                                                <a href="" title="Baterias para motos en Colombia" class="product-image">
+        <img src="micro/imagenes/newprod/baterias.jpg" alt="Venta de baterias para motos" draggable="false">
+                                                                </a>
+                                                                <div class="product-shop">
+                                                                    <h3 class="product-name">
+        <a href="" title="Almacen de baterias para moto">
+        Baterias de 12 voltios en gel o secas marca Dynavolt</a>
+                                                                    </h3>
+        <h3 class="product-sku">BTY-FPGA</h3>
+                                                                <div class="price-box">
+                                                                     <p class="old-price"><span class="price-label">
+                                                                    
+        Precio Regular:</span><span class="price" id="old-price-4897">$90.000 </span></p>
+        <p class="special-price"><span class="price-label">Precio Especial</span>
+        <span class="price" id="product-price-4897">$50.000 </span></p>
+                                                                </div>
+                                                                <div class="actions">
+        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Ver mas</span></span></button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="label-product"> </div><div class="clear"></div>
+                                                            </div>
+                                                         </li>                                                 
+                               <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+                                                            <div class="wrapper-hover">
+                                                                <a href="" title="Almacen de bujias de repuesto para moto" class="product-image">
+        <img src="micro/imagenes/newprod/bujiasparamoto.png" alt="Tienda on-line con bujias de repuestos para moto " draggable="false">
+                                                                </a>
+                                                                <div class="product-shop">
+                                                                    <h3 class="product-name">
+        <a href="" title="Venta de bujias de repuesto para motos en Colombia">
+        Bujias de 10mm 12mm y 14mm  para todos los modelos</a>
+                                                                    </h3>
+        <h3 class="product-sku">ZRAG-45YT</h3>
+                                                                <div class="price-box">
+                                                                     <p class="old-price"><span class="price-label">
+                                                                    
+        Precio Regular:</span><span class="price" id="old-price-4897">$20.000 </span></p>
+        <p class="special-price"><span class="price-label">Precio Especial</span>
+        <span class="price" id="product-price-4897">$14.000 </span></p>
+                                                                </div>
+                                                                <div class="actions">
+        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todas</span></span></button>
+        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Ver mas</span></span></button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="label-product"> </div><div class="clear"></div>
+                                                            </div>
+                                                         </li>
+                               <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+                                                            <div class="wrapper-hover">
+                                                                <a href="" title="Venta de Kits de arrastre para motos" class="product-image">
+        <img src="micro/imagenes/newprod/kitdearrastredemoto.png" alt="Kit de arrastre motos Yamaha  Akt Honda" draggable="false">
+                                                                </a>
+                                                                <div class="product-shop">
+                                                                    <h3 class="product-name">
+        <a href="" title="Venta de Kits de arrastre para motos en toda Colombia">
+        Kit de arrastre  cadenas y discos todas las referencias</a>
+                                                                    </h3>
+        <h3 class="product-sku">YUT2-HGFD</h3>
+                                                                <div class="price-box">
+                                                                     <p class="old-price"><span class="price-label">
+                                                                    
+        Precio Regular:</span><span class="price" id="old-price-4897">$80.000 </span></p>
+        <p class="special-price"><span class="price-label">Precio Especial</span>
+        <span class="price" id="product-price-4897">$60.000</span></p>
+                                                                </div>
+                                                                <div class="actions">
+        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Ver mas</span></span></button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="label-product"> </div><div class="clear"></div>
+                                                            </div>
+                                                         </li>                                                 
+                               <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+                                                            <div class="wrapper-hover">
+                                                                <a href="" title="Venta de Kits de Biela para motos Yamaha Akt Honda" class="product-image">
+        <img src="micro/imagenes/newprod/kitdebielaparamoto.png" alt="Almacen de kits de biela de repuestos para moto" draggable="false">
+                                                                </a>
+                                                                <div class="product-shop">
+                                                                    <h3 class="product-name">
+        <a href="" title="2x-225x Trinocular Boom Stand Stereo Zoom Microscope + High-speed 20MP Camera">
+        Kit de biela  para moto con el 20% de descuento</a>
+                                                                    </h3>
+        <h3 class="product-sku">MK89-34DH</h3>
+                                                                <div class="price-box">
+                                                                     <p class="old-price"><span class="price-label">
+                                                                    
+        Precio Regular:</span><span class="price" id="old-price-4897">$80.000 </span></p>
+        <p class="special-price"><span class="price-label">Precio Especial</span>
+        <span class="price" id="product-price-4897">$60.000 </span></p>
+                                                                </div>
+                                                                <div class="actions">
+        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Ver mas</span></span></button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="label-product"> </div><div class="clear"></div>
+                                                            </div>
+                                                         </li>
+                               <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+                                                            <div class="wrapper-hover">
+                                                                <a href="" title="Tienda de bobinas y partes electricas para moto" class="product-image">
+        <img src="micro/imagenes/newprod/bobinasparamoto.png" alt="Venta de repuestos electricos para moto" draggable="false">
+                                                                </a>
+                                                                <div class="product-shop">
+                                                                    <h3 class="product-name">
+        <a href="" title="Bobinas bujias bombillos y cables electricos para motos en Colombia">
+        Bobinas, bombillos y  repuestos electricos</a>
+                                                                    </h3>
+        <h3 class="product-sku">MYFG-GH89</h3>
+                                                                <div class="price-box">
+                                                                     <p class="old-price"><span class="price-label">
+                                                                    
+        Precio Regular:</span><span class="price" id="old-price-4897">$30.000 </span></p>
+        <p class="special-price"><span class="price-label">Precio Especial</span>
+        <span class="price" id="product-price-4897">$20.000 </span></p>
+                                                                </div>
+                                                                <div class="actions">
+        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todo</span></span></button>
+        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Ver mas</span></span></button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="label-product"> </div><div class="clear"></div>
+                                                            </div>
+                                                         </li>                                              
+                            </ul>-->
+                            
+                             <ul class="slides products-grid row" style="width: 1800%; transition-duration: 0.6s; transform: translate3d(-580px, 0px, 0px);">
                     <li class="item col-xs-4" style="width: 290px; float: left; display: block;"><!--Inicia producto nuevoNo1-->
 					 <div class="wrapper-hover">
                       <a href="<?php echo($enlaces2[0]);?>" title="<?php echo($prodnuevosdesc[0]); ?>" class="product-image">  
@@ -580,34 +812,197 @@ $preciobEspecial[7]='$8.000';
                     </li><!--Fin producto nuevoNo1-->                                                 
                                                     
                    </ul>
-        	      </div>
-                  <ol class="flex-control-nav flex-control-paging">
-                    <li><a class="">1</a></li>
-                    <li><a class="">2</a></li>
-                    <li><a class="flex-active">3</a></li>
-                    <li><a class="">4</a></li>
-                    <li><a class="">5</a></li>
-                    <li><a class="">6</a></li>
-                    <li><a class="">9</a></li>
-                  </ol>
-				  <div style="background-color:red;z-index:190;">
-                    <ul class="flex-direction-nav">
-                     <li class="flex-nav-prev"><a class="flex-prev" href="#">Anterior</a></li>
-                     <li class="flex-nav-next"><a class="flex-next" href="#">Siguiente</a></li>
-                    </ul>
-				  </div>
-                 </div>
-                 <script type="text/javascript">
-	                var jnew = jQuery.noConflict();
-		            jnew(window).load(function(){	var width = jnew(window).width();
-					if(width <= 767){itemWidth = null;}else{itemWidth = 290;}
-					jnew('.product-new-list').flexslider({animation: "slide",animationLoop: true,move:1,itemWidth: itemWidth,});});
-                 </script>
-                 
-				 <div class="page-title category-title"><h2><?php echo($titulo2); ?></h2></div>
-                  <div class="flexslider product-bestseller-list"><!--Best Seller-->
-                   <div class="flex-viewport" style="overflow: hidden; position: relative;">
-		            <ul class="slides products-grid row" style="width: 6400%; transition-duration: 0.6s; transform: translate3d(-7540px, 0px, 0px);">
+        	      
+        	    
+	   
+                                                 </div>
+                                            	<ol class="flex-control-nav flex-control-paging">
+                                            		<li><a class="">1</a></li>
+                                            		<li><a class="">2</a></li>
+                                            		<li><a class="flex-active">3</a></li>
+                                            		<li><a class="">4</a></li>
+                                            		<li><a class="">5</a></li>
+                                            		<li><a class="">6</a></li>
+                                            		<li><a class="">9</a></li>
+                                            	</ol><div style="background-color:red;z-index:190;">
+                                            	<ul class="flex-direction-nav">
+                                            		<li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li>
+                                            		<li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li>
+                                            	</ul></div>
+                                            </div>
+                                            <script type="text/javascript">
+	                                            var jnew = jQuery.noConflict();
+		                                        jnew(window).load(function(){	var width = jnew(window).width();
+										        if(width <= 767){itemWidth = null;}else{itemWidth = 290;}
+									        	jnew('.product-new-list').flexslider({animation: "slide",animationLoop: true,move:1,itemWidth: itemWidth,});});
+                                            </script>
+                                            
+                                            
+                                            
+                                            
+<!--Inicia  los Best Seller 31 productos--> <div class="page-title category-title"><h2>Los m&aacute;s Buscados</h2></div>
+                                            <div class="flexslider product-bestseller-list"><!--Best Seller-->
+                                                <div class="flex-viewport" style="overflow: hidden; position: relative;">
+		                                            <!--<ul class="slides products-grid row" style="width: 6400%; transition-duration: 0.6s; transform: translate3d(-7540px, 0px, 0px);">
+		                                                <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+				                                            <div class="wrapper-hover">
+					                                            <a href="stopsparamoto.php" title="Stop para motocicletas " class="product-image">
+					                                                <img src="micro/imagenes/bestseller/stopmoto.png" alt="" draggable="false">
+					                                            </a>
+					                                            <div class="product-shop">
+						                                            <h3 class="product-name"><a href="stopsparamoto.php" title="St80X ">Stop para motocicletas</a></h3>
+						                                            <h3 class="product-sku">QWK89-COMB8</h3>
+						                                            <div class="price-box">
+                                                                        <p class="old-price"><span class="price-label">Precio Regular:</span><span class="price" id="old-price-128">$40.000</span></p>
+							                                            <p class="special-price"><span class="price-label">Precio Especial</span><span class="price" id="product-price-128">$30.000</span></p>
+						                                            </div>
+						                                            <div class="actions">
+                                                                        <button type="button" title="Ver stop para moto" class="button btn-cart" onclick="setLocation('stopsparamoto.php')"><span><span>Ver todos</span></span></button>
+                                                                        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Detalles</span></span></button>
+						                                            </div>
+					                                            </div>
+				                                            </div>
+			                                            </li>
+      
+                                 <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+				                                            <div class="wrapper-hover">
+					                                            <a href="farolas.php" title="Studen-80X " class="product-image">
+					                                                <img src="micro/imagenes/bestseller/vidriofarolasparamoto.png" alt="Vidrios de Farolas para moto" draggable="false">
+					                                            </a>
+					                                            <div class="product-shop">
+						                                            <h3 class="product-name"><a href="farolas.php" title="St80X ">Vidrios de Farola para moto </a></h3>
+						                                            <h3 class="product-sku">MY25-56RE</h3>
+						                                            <div class="price-box">
+                                                                        <p class="old-price"><span class="price-label">Precio Regular:</span><span class="price" id="old-price-128">$20.000</span></p>
+							                                            <p class="special-price"><span class="price-label">Precio Especial</span><span class="price" id="product-price-128">$14.000</span></p>
+						                                            </div>
+						                                            <div class="actions">
+                                                                        <button type="button" title="Ver farolas para moto" class="button btn-cart" onclick="setLocation('farolas.php')"><span><span>Ver todas</span></span></button>
+                                                                        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Detalles</span></span></button>
+						                                            </div>
+					                                            </div>
+				                                            </div>
+			                                            </li>
+                                 
+                                                        <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+				                                            <div class="wrapper-hover">
+					                                            <a href="taponesdedireccion.php" title="Studen-80X " class="product-image">
+					                                                <img src="micro/imagenes/bestseller/tornilloparamoto.png" alt="Tornillos de lujo para moto" draggable="false">
+					                                            </a>
+					                                            <div class="product-shop">
+						                                            <h3 class="product-name"><a href="taponesdedireccion.php" title="St80X ">Tornillos de lujo para placa</a></h3>
+						                                            <h3 class="product-sku">TOR06R-PZH</h3>
+						                                            <div class="price-box">
+                                                                        <p class="old-price"><span class="price-label">Precio Regular:</span><span class="price" id="old-price-128">$7.000</span></p>
+							                                            <p class="special-price"><span class="price-label">Precio Especial</span><span class="price" id="product-price-128">$4.000</span></p>
+						                                            </div>
+						                                            <div class="actions">
+                                                                        <button type="button" title="Ver tapones de direccion" class="button btn-cart" onclick="setLocation('taponesdedireccion.php')"><span><span>Ver todos</span></span></button>
+                                                                        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Detalles</span></span></button>
+						                                            </div>
+					                                            </div>
+				                                            </div>
+			                                            </li>
+			                                            
+                                <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+				                                            <div class="wrapper-hover">
+					                                            <a href="" title="Studen-80X " class="product-image">
+					                                                <img src="micro/imagenes/bestseller/tapavalvulasparamoto.png" alt="Tapa valvulas para moto y carro" draggable="false">
+					                                            </a>
+					                                            <div class="product-shop">
+						                                            <h3 class="product-name"><a href="" title="St80X ">Tapa-Valvulas para moto y caro</a></h3>
+						                                            <h3 class="product-sku">FBG42-PZ897</h3>
+						                                            <div class="price-box">
+                                                                        <p class="old-price"><span class="price-label">Precio Regular:</span><span class="price" id="old-price-128">$15.000</span></p>
+							                                            <p class="special-price"><span class="price-label">Precio Especial</span><span class="price" id="product-price-128">$8.000</span></p>
+						                                            </div>
+						                                            <div class="actions">
+                                                                        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+                                                                        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Detalles</span></span></button>
+						                                            </div>
+					                                            </div>
+				                                            </div>
+			                                            </li>
+                                <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+				                                            <div class="wrapper-hover">
+					                                            <a href="" title="Studen-80X " class="product-image">
+					                                                <img src="micro/imagenes/bestseller/taponesdedireccion.png" alt="" draggable="false">
+					                                            </a>
+					                                            <div class="product-shop">
+						                                            <h3 class="product-name"><a href="" title="St80X ">Tapones para direccion</a></h3>
+						                                            <h3 class="product-sku">TAP34-REF8</h3>
+						                                            <div class="price-box">
+                                                                        <p class="old-price"><span class="price-label">Precio Regular:</span><span class="price" id="old-price-128">$18.000</span></p>
+							                                            <p class="special-price"><span class="price-label">Special Price</span><span class="price" id="product-price-128">$12.000</span></p>
+						                                            </div>
+						                                            <div class="actions">
+                                                                        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+                                                                        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Detalles</span></span></button>
+						                                            </div>
+					                                            </div>
+				                                            </div>
+			                                            </li>
+			                                            <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+				                                            <div class="wrapper-hover">
+					                                            <a href="" title="Switch de encendido " class="product-image">
+					                                                <img src="micro/imagenes/bestseller/switchencendido.png" alt="" draggable="false">
+					                                            </a>
+					                                            <div class="product-shop">
+						                                            <h3 class="product-name"><a href="" title="St80X ">Switch de encendido</a></h3>
+						                                            <h3 class="product-sku">NAP3Y-DEF8</h3>
+						                                            <div class="price-box">
+                                                                        <p class="old-price"><span class="price-label">Precio Regular:</span><span class="price" id="old-price-128">$25.000</span></p>
+							                                            <p class="special-price"><span class="price-label">Precio Especial</span><span class="price" id="product-price-128">$15.000</span></p>
+						                                            </div>
+						                                            <div class="actions">
+                                                                        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+                                                                        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Detalles</span></span></button>
+						                                            </div>
+					                                            </div>
+				                                            </div>
+			                                            </li>
+			                                            <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+				                                            <div class="wrapper-hover">
+					                                            <a href="" title="Studen-80X " class="product-image">
+					                                                <img src="micro/imagenes/bestseller/tapatanquedecombustible.png" alt="" draggable="false">
+					                                            </a>
+					                                            <div class="product-shop">
+						                                            <h3 class="product-name"><a href="" title="St80X ">Tapa para tanques de Combustible</a></h3>
+						                                            <h3 class="product-sku">TAPK34-COMB8</h3>
+						                                            <div class="price-box">
+                                                                        <p class="old-price"><span class="price-label">Precio Regular:</span><span class="price" id="old-price-128">$25.000</span></p>
+							                                            <p class="special-price"><span class="price-label">Special Price</span><span class="price" id="product-price-128">$18.000</span></p>
+						                                            </div>
+						                                            <div class="actions">
+                                                                        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todos</span></span></button>
+                                                                        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Detalles</span></span></button>
+						                                            </div>
+					                                            </div>
+				                                            </div>
+			                                            </li>
+			                                            <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
+				                                            <div class="wrapper-hover">
+					                                            <a href="" title="Studen-80X " class="product-image">
+					                                                <img src="micro/imagenes/bestseller/varillafrenosparamoto.png" alt="Varillas pastillas y bandas para freno de moto" draggable="false">
+					                                            </a>
+					                                            <div class="product-shop">
+						                                            <h3 class="product-name"><a href="" title="St80X ">Varilla de Freno </a></h3>
+						                                            <h3 class="product-sku">SE35-6745</h3>
+						                                            <div class="price-box">
+                                                                        <p class="old-price"><span class="price-label">Precio Regular:</span><span class="price" id="old-price-128">$10.000</span></p>
+							                                            <p class="special-price"><span class="price-label">Precio Especial</span><span class="price" id="product-price-128">$8.000</span></p>
+						                                            </div>
+						                                            <div class="actions">
+                                                                        <button type="button" title="Add to Cart" class="button btn-cart" onclick="setLocation('')"><span><span>Ver todas</span></span></button>
+                                                                        <button type="button" title="Details" class="button btn-details" onclick="setLocation('')"><span><span>Detalles</span></span></button>
+						                                            </div>
+					                                            </div>
+				                                            </div>
+			                                            </li>
+			                                            
+			                                            
+                                                    </ul>-->
+	                                             <ul class="slides products-grid row" style="width: 6400%; transition-duration: 0.6s; transform: translate3d(-7540px, 0px, 0px);">
 		             <li class="item col-xs-4" style="width: 290px; float: left; display: block;">
 				      <div class="wrapper-hover">
 						<a href="<?php echo($enlaces3[0]);?>" title="<?php echo($masbuscadosdesc[0]); ?>" class="product-image">
@@ -770,41 +1165,43 @@ $preciobEspecial[7]='$8.000';
 				      </div>
 			         </li>
 			        </ul>
-	               </div>
-                   <ol class="flex-control-nav flex-control-paging">
-                    <li><a class="">1</a></li>
-                    <li><a class="">2</a></li>
-                    <li><a class="">3</a></li>
-                    <li><a class="">4</a></li>
-                    <li><a class="">5</a></li>
-                    <li><a class="">6</a></li>
-                    <li><a class="">7</a></li>
-                    <li><a class="">8</a></li>
-                   </ol>
-                   <ul class="flex-direction-nav">
-                        <li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li>
-                        <li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li>
-                   </ul>
-				  </div>
-	              <script type="text/javascript">
-		                var jbest = jQuery.noConflict();
-		                jbest(window).load(function(){
-					    var width = jnew(window).width();
-						if(width <= 767){itemWidth = null;}else{itemWidth = 290;}
-						jbest('.product-bestseller-list').flexslider({animation: "slide",animationLoop: true,move:1,itemWidth: itemWidth,});});
-	              </script>									
-                </div><!--Fin de la Clase padding-s-->
-			   </div>
-			   <?php include "micro/motopartes/menuizq.php" ?>
-			  </div><!--Fin de clase row-->
-	         </div><!--Fin de clase main-->
-	        </div><!--Fin de clase col-xs-12-->
-	       </div><!--Fin de clase row-->
-          </div><!--Fin de clase container-->
-         </div><!--main-container   El mas denso-->
-		  <?php include "micro/motopartes/foter.php" ?>
+	               
+	                                            </div>
+                                            	<ol class="flex-control-nav flex-control-paging">
+                                            	    <li><a class="">1</a></li>
+                                            	    <li><a class="">2</a></li>
+                                            	    <li><a class="">3</a></li>
+                                            	    <li><a class="">4</a></li>
+                                            	    <li><a class="">5</a></li>
+                                            	    <li><a class="">6</a></li>
+                                            	    <li><a class="">7</a></li>
+                                            	    <li><a class="">8</a></li>
+                                            	</ol>
+                                            	<ul class="flex-direction-nav">
+                                            	    <li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li>
+                                            	    <li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li>
+                                            	</ul>
+	 <!-- Fin de los best seller -->       </div>
+	                                        <script type="text/javascript">
+		                                        var jbest = jQuery.noConflict();
+		                                        jbest(window).load(function(){
+									        	var width = jnew(window).width();
+										        if(width <= 767){itemWidth = null;}else{itemWidth = 290;}
+										        jbest('.product-bestseller-list').flexslider({animation: "slide",animationLoop: true,move:1,itemWidth: itemWidth,});});
+	                                        </script>									
+                                        </div><!--Fin de la Clase padding-s-->
+								    </div>
+							        <?php include "micro/motopartes/menuizq.php" ?>
+							    </div><!--Fin de clase row-->
+	                        </div><!--Fin de clase main-->
+	                    </div><!--Fin de clase col-xs-12-->
+	                    </div><!--Fin de clase row-->
+                    </div><!--Fin de clase container-->
+                </div><!--main-container   El mas denso-->
+			 <?php include "micro/motopartes/foter.php" ?>
 		</div><!--Fin del Page-->
 	</div>
     <?php //include "micro/motopartes/ventas.php" ?><!--Chat-->
 </body>
+
 </html>
