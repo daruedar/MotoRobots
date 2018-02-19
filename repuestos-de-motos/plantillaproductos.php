@@ -2,7 +2,6 @@
 session_start();
 //include("micro/MisClases/DriverBD.php");//include temporal mientras agrego produ a la BD
 $t=session_id();
-$carpeta='balancines/';
 $titulo='BALANCINES';
 $label1='REF:';
 $label2='Precio Regular:';
@@ -17,6 +16,10 @@ $imagenes[2]='blc2501.png';
 $imagenes[3]='blc2502.png';
 $imagenes[4]='blc2503.png';
 $imagenes[5]='blc2510.png';
+
+$imagenes[6]='blc2510.png';
+$imagenes[7]='blc2510.png';
+$imagenes[8]='blc2510.png';
 //*********************************************************************
 
 $nombres[0]='Balancin para moto:PULSAR-180/200/220 DISCOVER 135';
@@ -27,6 +30,9 @@ $nombres[3]='Balancin para moto modelo: PULSAR UG/ PULSAR II';
 $nombres[4]='Balancin para moto modelo: GN-125/ DR-200';
 $nombres[5]='Balancin para moto modelo: CG-125/ AKT-125';
 
+$nombres[6]='Balancin para moto modelo: CG-125/ AKT-125';
+$nombres[7]='Balancin para moto modelo: CG-125/ AKT-125';
+$nombres[8]='Balancin para moto modelo: CG-125/ AKT-125';
 //********************************************************************
 $referencias[0]='PLS-74';
 $referencias[1]='PLS-75';
@@ -35,6 +41,10 @@ $referencias[2]='PLS-80';
 $referencias[3]='PLS-81';
 $referencias[4]='PLS-82';
 $referencias[5]='PLS-84';
+
+$referencias[6]='PLS-84';
+$referencias[7]='PLS-84';
+$referencias[8]='PLS-84';
 //*****************************************************
 //ojo los precios  no admiten puntos decimales en la BD
 $precios[0]='20.000';
@@ -44,6 +54,10 @@ $precios[2]='20.000';
 $precios[3]='20.000';
 $precios[4]='20.000';
 $precios[5]='20.000';
+
+$precios[6]='20.000';
+$precios[7]='20.000';
+$precios[8]='20.000';
 //*****************************************************
 $preciosb[0]='25.000';
 $preciosb[1]='25.000';
@@ -52,6 +66,10 @@ $preciosb[2]='25.000';
 $preciosb[3]='25.000';
 $preciosb[4]='25.000';
 $preciosb[5]='25.000';
+
+$preciosb[6]='25.000';
+$preciosb[7]='25.000';
+$preciosb[8]='25.000';
 
 
 //*****************************************************
@@ -65,6 +83,9 @@ $idproductos[3]='551';
 $idproductos[4]='552';
 $idproductos[5]='553';
 
+$idproductos[6]='553';
+$idproductos[7]='553';
+$idproductos[8]='553';
 
 //*****************************************************
 $nombresaux[0]='Balancin para moto:PULSAR-180/200/220 DISCOVER 135';
@@ -74,6 +95,10 @@ $nombresaux[2]='Balancin para moto modelo: AKT-125';
 $nombresaux[3]='Balancin para moto modelo: PULSAR UG/ PULSAR II';
 $nombresaux[4]='Balancin para moto modelo: GN-125/ DR-200';
 $nombresaux[5]='Balancin para moto modelo: CG-125/ AKT-125';
+
+$nombresaux[6]='Balancin para moto modelo: CG-125/ AKT-125';
+$nombresaux[7]='Balancin para moto modelo: CG-125/ AKT-125';
+$nombresaux[8]='Balancin para moto modelo: CG-125/ AKT-125';
 
 $enlaces[0]='';
 $enlaces[1]='';
@@ -103,67 +128,7 @@ for($i=0;$i<6;$i++){
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" style="height: 100%;" lang="en">
-<head>
-    <!--**********************EDITAR METADATOS Y PALABRAS CLAVES-->
-    
-<link href="autenticos/css.css" rel="stylesheet" type="text/css">
-<link href="autenticos/translateelement.css"type="text/css" rel="stylesheet" charset="UTF-8" >
-<link href="autenticos/buttons.css"rel="stylesheet" type="text/css" >
-<link href="autenticos/cd3d4ebe845a93a761b3a60a6ae34052.css"rel="stylesheet" type="text/css"  media="all">
-<link href="autenticos/a8d7bbe2916ed0f52877eaeee2bd058b.css"rel="stylesheet" type="text/css"  media="print">
-<link rel="stylesheet" type="text/css" href="autenticos/flexslider.css" media="all">
-<link rel="stylesheet" type="text/css" href="autenticos/font/css/font-awesome.min.css" media="all">
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
-
-
-<script src="autenticos/bat.js" async=""></script>
-<script async="" src="autenticos/analytics.js"></script>
-<script type="text/javascript" async="" src="autenticos/ga_002.js"></script>
-<script type="text/javascript" async="" src="autenticos/114771.js"></script>
-<script type="text/javascript" async="" src="autenticos/gate.js"></script>
-<script type="text/javascript" src="autenticos/jquery-1.js"></script>
-<script type="text/javascript" src="autenticos/superfish.js"></script>
-<script type="text/javascript" src="autenticos/scripts.js"></script>
-
-<script type="text/javascript" src="autenticos/prototype.js"></script>
-<script type="text/javascript" src="autenticos/ccard.js"></script>
-<script type="text/javascript" src="autenticos/validation.js"></script>
-<script type="text/javascript" src="autenticos/builder.js"></script>
-<script type="text/javascript" src="autenticos/effects.js"></script>
-<script type="text/javascript" src="autenticos/dragdrop.js"></script>
-<script type="text/javascript" src="autenticos/controls.js"></script>
-<script type="text/javascript" src="autenticos/slider.js"></script>
-<script type="text/javascript" src="autenticos/js.js"></script>
-<script type="text/javascript" src="autenticos/form.js"></script>
-<script type="text/javascript" src="autenticos/translate.js"></script>
-<script type="text/javascript" src="autenticos/cookies.js"></script>
-<script type="text/javascript" src="autenticos/cloud-zoom.js"></script>
-<script type="text/javascript" src="autenticos/ga.js"></script>
-<script type="text/javascript" src="autenticos/lightbox.js"></script>
-<script type="text/javascript" src="autenticos/jquery_002.js"></script>
-<script type="text/javascript" src="autenticos/jquery_004.js"></script>
-<script type="text/javascript" src="autenticos/jquery_003.js"></script>
-<script type="text/javascript" src="autenticos/bootstrap.js"></script>
-<script type="text/javascript" src="autenticos/jquery_005.js"></script>
-<script type="text/javascript" src="autenticos/jquery.js"></script>
-<script type="text/javascript" src="autenticos/jquery_006.js"></script>
-<script type="text/javascript" src="autenticos/catalogevent.js"></script>
-<script type="text/javascript" src="autenticos/wishlist.js"></script>
-<script type="text/javascript" src="autenticos/easytabs.js"></script>
-<script type="text/javascript" src="autenticos/carousel.js"></script>
-<script src="autenticos/integration-vendors.js"></script>
-<script type="text/javascript" src="autenticos/deployment.js"></script>
-<script type="text/javascript" charset="UTF-8" src="autenticos/main_es.js"></script>
-<script type="text/javascript" charset="UTF-8" src="autenticos/element_main.js"></script>
-<script type="text/javascript" src="autenticos/integration.js"></script>
-<script type="text/javascript" src="autenticos/conversion.js"></script>
-<script type="text/javascript" src="autenticos/element.js"></script>
-<script src="autenticos/jquery_002.js"></script>
-</head>
+<head> <?php require ('micro/motopartes/head.php'); ?></head>
 <body class="ps-static  cms-index-index cms-home" style="position: relative; min-height: 100%; top: 0px;">   
  <div class="wrapper ps-static en-lang-class">
    <noscript>
