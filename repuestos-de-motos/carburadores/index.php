@@ -5,7 +5,7 @@
 session_start();
 //include("micro/MisClases/DriverBD.php");//include temporal mientras agrego produ a la BD
 //Subiente
-include("micro/MisClases/Visitantes.php");
+include("../../micro/MisClases/Visitantes.php");
 $ip=$_SERVER['REMOTE_ADDR'];
 date_default_timezone_set('America/Bogota');
 $fecha=date("Y-m-d");
@@ -20,19 +20,19 @@ $label1='REF:';
 $label2='Precio Regular:';
 $label3='Precio Especial';
 $label4='Comprar';//boton comprar
-$destinoform='micro/compras.php';//Cuando se da click en un boton comprar 
+$destinoform='../../micro/compras.php';//Cuando se da click en un boton comprar 
 //$imagenes[] contiene la ruta dode se almacena cada imagen
-$imagenes[0]='micro/imagenes/repuestosparamoto/kitcarburador/kit2601.png';
-$imagenes[1]='micro/imagenes/repuestosparamoto/kitcarburador/kit2602.png';
-$imagenes[2]='micro/imagenes/repuestosparamoto/kitcarburador/kit2603.png';
+$imagenes[0]='../../micro/imagenes/repuestosparamoto/kitcarburador/kit2601.png';
+$imagenes[1]='../../micro/imagenes/repuestosparamoto/kitcarburador/kit2602.png';
+$imagenes[2]='../../micro/imagenes/repuestosparamoto/kitcarburador/kit2603.png';
 
-$imagenes[3]='micro/imagenes/repuestosparamoto/kitcarburador/kit2604.png';
-$imagenes[4]='micro/imagenes/repuestosparamoto/kitcarburador/kit2605.png';
-$imagenes[5]='micro/imagenes/repuestosparamoto/kitcarburador/kit2606.png';
+$imagenes[3]='../../micro/imagenes/repuestosparamoto/kitcarburador/kit2604.png';
+$imagenes[4]='../../micro/imagenes/repuestosparamoto/kitcarburador/kit2605.png';
+$imagenes[5]='../../micro/imagenes/repuestosparamoto/kitcarburador/kit2606.png';
 
-$imagenes[6]='micro/imagenes/repuestosparamoto/kitcarburador/kit2607.png';
-$imagenes[7]='micro/imagenes/repuestosparamoto/kitcarburador/kit2608.png';
-$imagenes[8]='micro/imagenes/repuestosparamoto/kitcarburador/kit2609.png';
+$imagenes[6]='../../micro/imagenes/repuestosparamoto/kitcarburador/kit2607.png';
+$imagenes[7]='../../micro/imagenes/repuestosparamoto/kitcarburador/kit2608.png';
+$imagenes[8]='../../micro/imagenes/repuestosparamoto/kitcarburador/kit2609.png';
 //*********************************************************************
 $nombres[0]='Kit carburador para: AKT 125';
 $nombres[1]='Kit carburador para: AX 100';
@@ -135,7 +135,76 @@ for($i=0;$i<6;$i++){
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" style="height: 100%;" lang="en">
-<head> <?php require ('micro/motopartes/head.php'); ?></head>
+<head> 
+
+<title>Repuestos AKT Honda  Yamaha  Suzuki motos todos los Modelos</title>  
+<meta name="description" content="Encuentra  los repuestos AKT Honda Yamaha Suzuki para tu moto y consulta su precio ¡con un click! 
+Somos Importadores y Distribuidores  de Repuestos y accesorios para motos AKT Honda Yamaha Suzuki  en Colombia. 
+En Motoraicer S.A.S contamos con un amplio inventario de repuestos para motos AKT  Honda Yamaha  ademas de accesorios originales especializados para cada tipo de moto de las marcas:">
+<meta name="keywords" content="repuestos y accesorios para  motos  AKT Honda Yamaha Suzuki" />
+
+
+
+<link href="../autenticos/css.css" rel="stylesheet" type="text/css">
+<link href="../../autenticos/translateelement.css"type="text/css" rel="stylesheet" charset="UTF-8" >
+<link href="../../autenticos/buttons.css"rel="stylesheet" type="text/css" >
+<link href="../../autenticos/cd3d4ebe845a93a761b3a60a6ae34052.css"rel="stylesheet" type="text/css"  media="all">
+<link href="../../autenticos/a8d7bbe2916ed0f52877eaeee2bd058b.css"rel="stylesheet" type="text/css"  media="print">
+<link rel="stylesheet" type="text/css" href="../../autenticos/flexslider.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../autenticos/font/css/font-awesome.min.css" media="all">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+<script src="../../autenticos/bat.js" async=""></script>
+<script async="" src="../../autenticos/analytics.js"></script>
+<script type="text/javascript" async="" src="../../autenticos/ga_002.js"></script>
+<script type="text/javascript" async="" src="../../autenticos/114771.js"></script>
+<script type="text/javascript" async="" src="../../autenticos/gate.js"></script>
+<script type="text/javascript" src="../../autenticos/jquery-1.js"></script>
+<script type="text/javascript" src="../../autenticos/superfish.js"></script>
+<script type="text/javascript" src="../../autenticos/scripts.js"></script>
+<script type="text/javascript" src="../../autenticos/prototype.js"></script>
+<script type="text/javascript" src="../../autenticos/ccard.js"></script>
+<script type="text/javascript" src="../../autenticos/validation.js"></script>
+<script type="text/javascript" src="../../autenticos/builder.js"></script>
+<script type="text/javascript" src="../../autenticos/effects.js"></script>
+<script type="text/javascript" src="../../autenticos/dragdrop.js"></script>
+<script type="text/javascript" src="../../autenticos/controls.js"></script>
+<script type="text/javascript" src="../../autenticos/slider.js"></script>
+<script type="text/javascript" src="../../autenticos/js.js"></script>
+<script type="text/javascript" src="../../autenticos/form.js"></script>
+<script type="text/javascript" src="../../autenticos/translate.js"></script>
+<script type="text/javascript" src="../../autenticos/cookies.js"></script>
+<script type="text/javascript" src="../../autenticos/cloud-zoom.js"></script>
+<script type="text/javascript" src="../../autenticos/ga.js"></script>
+<script type="text/javascript" src="../../autenticos/lightbox.js"></script>
+<script type="text/javascript" src="../../autenticos/jquery_002.js"></script>
+<script type="text/javascript" src="../../autenticos/jquery_004.js"></script>
+<script type="text/javascript" src="../../autenticos/jquery_003.js"></script>
+<script type="text/javascript" src="../../autenticos/bootstrap.js"></script>
+<script type="text/javascript" src="../../autenticos/jquery_005.js"></script>
+<script type="text/javascript" src="../../autenticos/jquery.js"></script>
+<script type="text/javascript" src="../../autenticos/jquery_006.js"></script>
+<script type="text/javascript" src="../../autenticos/catalogevent.js"></script>
+<script type="text/javascript" src="../../autenticos/wishlist.js"></script>
+<script type="text/javascript" src="../../autenticos/easytabs.js"></script>
+<script type="text/javascript" src="../../autenticos/carousel.js"></script>
+<script src="../../autenticos/integration-vendors.js"></script>
+<script type="text/javascript" src="../../autenticos/deployment.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../../autenticos/main_es.js"></script>
+<script type="text/javascript" charset="UTF-8" src="../../autenticos/element_main.js"></script>
+<script type="text/javascript" src="../../autenticos/integration.js"></script>
+<script type="text/javascript" src="../../autenticos/conversion.js"></script>
+<script type="text/javascript" src="../autenticos/element.js"></script>
+<script src="../../autenticos/jquery_002.js"></script>
+
+
+
+
+
+
+</head>
 <body class="ps-static  cms-index-index cms-home" style="position: relative; min-height: 100%; top: 0px;">   
  <div class="wrapper ps-static en-lang-class">
    <noscript>
@@ -149,10 +218,10 @@ for($i=0;$i<6;$i++){
    <div class="page">
 	<div class="shadow"></div>
 	<div class="swipe-left"></div>
-	<?php include "micro/motopartes/menusuperiormovil.php" ?>
+	<?php include "../../micro/motopartes/menusuperiormovil.php" ?>
 	<div class="header-container">
-	 <?php include "micro/motopartes/encabezado.php" ?>
-	 <?php include "micro/motopartes/menumovil.php" ?>
+	 <?php include "../../micro/motopartes/encabezado.php" ?>
+	 <?php include "../../micro/motopartes/menumovil.php" ?>
 	 <script type="text/javascript"><!--1.2.7-->
 		jQuery(document).ready(function() {
 		var $ = jQuery;var currentUrl = "";
@@ -453,8 +522,8 @@ for($i=0;$i<6;$i++){
 		      <div class="std"><p></p>
                <div class="magestore-bannerslider">
 		        <div class="magestore-bannerslider-standard">
-                 <script src="micro/js/jquery_002.js"></script>
-	             <link rel="stylesheet" type="text/css" href="micro/css/flexslider.css" media="all">
+                 <script src="../../micro/js/jquery_002.js"></script>
+	             <link rel="stylesheet" type="text/css" href="../../micro/css/flexslider.css" media="all">
 	             <script type="text/javascript">   
 		            var j7 = jQuery.noConflict();
 		            j7(window).load(function() {j7('.flexslider-7-1').flexslider({animation: "fade",slideshowSpeed: 4500}); });           
@@ -530,16 +599,16 @@ for($i=0;$i<6;$i++){
 	           </script>									
             </div><!--Fin de la Clase padding-s-->
            </div>
-		   <?php include "micro/motopartes/menuizq2.php" ?>
+		   <?php include "../../micro/motopartes/menuizq2.php" ?>
 		  </div><!--Fin de clase row-->
 	     </div><!--Fin de clase main-->
 	    </div><!--Fin de clase col-xs-12-->
 	   </div><!--Fin de clase row-->
       </div><!--Fin de clase container-->
      </div><!--main-container   El mas denso-->
-	 <?php include "micro/motopartes/foter.php" ?>
+	 <?php include "../../micro/motopartes/foter.php" ?>
 	</div><!--Fin del Page-->
 	</div>
-    <?php include "micro/motopartes/ventas.php" ?>
+    <?php include "../../micro/motopartes/ventas.php" ?>
 </body>
 </html>
