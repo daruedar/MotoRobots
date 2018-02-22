@@ -196,7 +196,7 @@ En Motoraicer S.A.S contamos con un amplio inventario de repuestos para motos AK
 <script type="text/javascript" charset="UTF-8" src="../../autenticos/element_main.js"></script>
 <script type="text/javascript" src="../../autenticos/integration.js"></script>
 <script type="text/javascript" src="../../autenticos/conversion.js"></script>
-<script type="text/javascript" src="../autenticos/element.js"></script>
+<script type="text/javascript" src="../../autenticos/element.js"></script>
 <script src="../../autenticos/jquery_002.js"></script>
 
 
@@ -218,10 +218,10 @@ En Motoraicer S.A.S contamos con un amplio inventario de repuestos para motos AK
    <div class="page">
 	<div class="shadow"></div>
 	<div class="swipe-left"></div>
-	<?php include "../../micro/motopartes/menusuperiormovil.php" ?>
+	<?php include "../motopartes/menusuperiormovil.php" ?>
 	<div class="header-container">
-	 <?php include "../../micro/motopartes/encabezado.php" ?>
-	 <?php include "../../micro/motopartes/menumovil.php" ?>
+	 <?php include "../motopartes/encabezado.php" ?>
+	 <?php include "../motopartes/menumovil.php" ?>
 	 <script type="text/javascript"><!--1.2.7-->
 		jQuery(document).ready(function() {
 		var $ = jQuery;var currentUrl = "";
@@ -599,7 +599,7 @@ En Motoraicer S.A.S contamos con un amplio inventario de repuestos para motos AK
 	           </script>									
             </div><!--Fin de la Clase padding-s-->
            </div>
-		   <?php include "../../micro/motopartes/menuizq2.php" ?>
+		   <?php include "../motopartes/menuizq.php" ?>
 		  </div><!--Fin de clase row-->
 	     </div><!--Fin de clase main-->
 	    </div><!--Fin de clase col-xs-12-->
